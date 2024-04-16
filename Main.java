@@ -6,7 +6,7 @@ public class Main {
     }
 }
     public class GameMenu {
-    
+        
         public static void showMenu() {
             Scanner scanner = new Scanner(System.in);
             int choice;
@@ -101,6 +101,7 @@ public class Main {
             System.out.println("\n----- Lista de Jogos de Consoles -----");
             GameManager.listAllGames();
         }
-    }
+   
+}
     
 
