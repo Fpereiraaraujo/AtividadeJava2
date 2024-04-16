@@ -14,7 +14,6 @@ public class GameManager {
         return null;
     }
 
-
     public static void deleteGame(String title) {
         Game game = findGame(title);
         if (game != null) {
@@ -34,5 +33,6 @@ public class GameManager {
             }
         }
     }
-
 }
+
+
