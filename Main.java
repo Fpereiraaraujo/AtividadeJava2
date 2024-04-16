@@ -5,9 +5,10 @@ public class Main {
         GameMenu.showMenu();
     }
 }
-    public class Sistema {
-private static Scanner scanner = new Scanner(System.in);
-    private static ArrayList<Personagem> listaPersonagens = new ArrayList<>();
+
+public class Sistema {
+    private static Scanner scanner = new Scanner(System.in);
+    private static ArrayList<Personagem> listaPersonagens = new ArrayList<>(); 
 
     public static void executar() {
         int opcao;
@@ -145,6 +146,5 @@ private static Scanner scanner = new Scanner(System.in);
         listaPersonagens.clear();
         System.out.println("Todos os personagens foram excluídos.");
     }
-    
 
-    }
+}
