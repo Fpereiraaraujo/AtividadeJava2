@@ -15,9 +15,10 @@ public class Main {
                 System.out.println("\n----- Menu de Jogos de Consoles -----");
                 System.out.println("1. Cadastrar jogo de ação (PlayStation)");
                 System.out.println("2. Cadastrar jogo de aventura (Xbox)");
-                System.out.println("3. Buscar jogo");
-                System.out.println("4. Excluir jogo");
-                System.out.println("5. Listar todos os jogos");
+                System.out.println("3. Cadastrar jogo de corrida (Nintendo Switch)");
+                System.out.println("4. Buscar jogo");
+                System.out.println("5. Excluir jogo");
+                System.out.println("6. Listar todos os jogos");
                 System.out.println("0. Sair");
                 System.out.print("Escolha uma opção: ");
                 choice = scanner.nextInt();
@@ -30,12 +31,15 @@ public class Main {
                         addAdventureGame();
                         break;
                     case 3:
-                        findGame();
+                        addRacingGame();
                         break;
                     case 4:
-                        deleteGame();
+                        findGame();
                         break;
                     case 5:
+                        deleteGame();
+                        break;
+                    case 6:
                         listAllGames();
                         break;
                     case 0:
@@ -63,6 +67,14 @@ public class Main {
             System.out.print("Digite o título do jogo de aventura (Xbox): ");
             String title = scanner.nextLine();
             GameManager.addGame(new AdventureGame(title));
+            System.out.println("Jogo cadastrado com sucesso!");
+        }
+    
+        private static void addRacingGame() {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Digite o título do jogo de corrida (Nintendo Switch): ");
+            String title = scanner.nextLine();
+            GameManager.addGame(new RacingGame(title));
             System.out.println("Jogo cadastrado com sucesso!");
         }
     
