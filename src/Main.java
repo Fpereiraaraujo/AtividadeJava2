@@ -1,14 +1,15 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        GameMenu.showMenu();
+        Sistema.executar();
     }
 }
 
-public class Sistema {
-    private static Scanner scanner = new Scanner(System.in);
-    private static ArrayList<Personagem> listaPersonagens = new ArrayList<>(); 
+ class Sistema {
+    public static Scanner scanner = new Scanner(System.in);
+    public static ArrayList<Personagem> listaPersonagens = new ArrayList<>(); 
 
     public static void executar() {
         int opcao;
@@ -72,13 +73,13 @@ public class Sistema {
 
         switch (tipo) {
             case 1:
-                personagem = new PersonagemJogador(nome);
+                personagem = new Jogador(nome);
                 break;
             case 2:
-                personagem = new PersonagemInimigo(nome);
+                personagem = new Inimigo(nome);
                 break;
             case 3:
-                personagem = new PersonagemNPC(nome);
+                personagem = new Personagem(nome);
                 break;
             default:
                 System.out.println("Tipo de personagem inválido.");
